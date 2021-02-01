@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Hands-On Ques 4</title>
+  </head>
+  <body>
+    <!-- to display multiple charts, each chart must have its own <div> element -->
+
+    <!-- to display multiple chart side-by-side, put all in same container -->
+    <!-- choose either CSS gird, bootstrap columns or flexbox -->
+    <div id="container">
+      <div style="height: 80vh" class="chart">
+        <div id="line-chart"></div>
+      </div>
+      <div style="height: 80vh" class="chart">
+        <div id="bar-chart"></div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
