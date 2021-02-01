@@ -5,16 +5,24 @@ const options = {
     },
     series: [
     ],
+    // the noData property allows us to define what to show 
+    // if there is no data loaded
     noData: {
         'text': "loading"
     }
 }
 
-const chart = new ApexChart(document.querySelector("#chart"), options)
+const chart = new ApexCharts(document.querySelector("#chart"), options)
 chart.render();
 
 
 // this listener only fires when all the other elements are ready 
-window.addEventListener('DOMContentLoaded', function(){
+window.addEventListener('DOMContentLoaded', async function(){
+    let series = await loadData();
+    // console.log(series)
+    chart.updateSeries([{
+        'name':'Sales',
+        'data': series.yearly
+    }])
 
 })
